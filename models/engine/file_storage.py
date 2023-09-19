@@ -26,8 +26,8 @@ class FileStorage:
     def delete(self, obj=None):
         """Deletes objects from __objects"""
         if obj is not None:
-            if obj in self.__objects:
-                self.__objects.remove(obj)
+            my_key = "{}.{}".format(type(obj).__name__, obj.id)
+            del self.__objects[my_key]
 
     def save(self):
         """Saves storage dictionary to file"""
