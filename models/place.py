@@ -5,19 +5,7 @@ from sqlalchemy import Column, String, Float, Integer, ForeignKey
 
 
 class Place(BaseModel, Base):
-    """ A place to stay
-    Attributes:
-        city_id: city id
-        user_id: user id
-        name: name input
-        description: string of description
-        number_rooms: number of room in int
-        number_bathrooms: number of bathrooms in int
-        max_guest: maximum guest in int
-        price_by_night: price for a staying in int
-        latitude: latitude in flaot
-        longitude: longitude in float
-        amenity_ids: list of Amenity ids"""
+    """ A place to stay """
 
     __tablename__ = "places"
     city_id = Column(String(60), ForeignKey("cities.id"), nullable=False)
