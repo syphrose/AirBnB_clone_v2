@@ -1,11 +1,15 @@
 #!/usr/bin/python3
+"""A script that generates a .tgz archive from the contents of
+    web_static folder using do_pack func"""
+
 from time import strftime
 from datetime import date
 from fabric.api import local
 
 
 def do_pack():
-    """ A script that generates a .tgz archive from the contents of web_static folder using do_pack func"""
+    """ A script that generates a .tgz archive from the contents of
+    web_static folder using do_pack func"""
 
     filename = strftime("%Y%m%d%H%M%S")
     try:
